@@ -43,3 +43,7 @@ Saya menyatakan bahwa riset dan kode ini saya kerjakan sendiri. AI hanya digunak
 
 ## Cara Buka Website
 Buka index.html menggunakan browser seperti Google Chrome.
+
+
+
+
