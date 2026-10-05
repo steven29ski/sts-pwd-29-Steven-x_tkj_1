@@ -1,0 +1,96 @@
+/* Header Kotak Merah & Teks Putih */
+header {
+  background-color: #e60012;
+  color: #ffffff;
+  padding: 20px 30px;       
+  border-radius: 8px;        
+  margin-bottom: 20px;      
+  text-align: center;      
+
+/* Mengubah warna teks h1 dan p di dalam header menjadi putih */
+header h1 {
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+header p {
+  color: #ffffff;
+  margin: 0;
+}
+
+
+
+/* Reset & Font Dasar */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f6f9;
+  color: #333333;
+}
+
+/* Container Pembungkus */
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul Utama & Subjudul */
+h1 {
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+h2 {
+  color: #003366; 
+  border-bottom: 2px solid #e60012;
+  padding-bottom: 6px;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Daftar List */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Gambar Logo */
+img {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Tautan / Link */
+a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #e60012;
+  text-decoration: underline;
+}
