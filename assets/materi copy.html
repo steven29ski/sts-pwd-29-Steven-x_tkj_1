@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi HTML Document Structure</title>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         1. HEADER
+         =========================================================
+         <header> biasanya diletakkan di bagian PALING ATAS website.
+         Isinya biasanya logo, judul situs, atau menu navigasi.
+    -->
+    <header>
+
+        <!--
+            <nav> = "navigation"
+            Digunakan untuk mengelompokkan link-link navigasi utama website.
+            Biasanya diletakkan di dalam <header>.
+        -->
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================================================
+         2. MAIN
+         =========================================================
+         <main> adalah tempat KONTEN UTAMA website.
+         Posisinya di antara <header> dan <footer>.
+         Dalam satu halaman HTML, <main> hanya boleh ada SATU.
+    -->
+    <main>
+
+        <!-- ---------------------------------------------------
+             2.1 PARAGRAPH
+             ---------------------------------------------------
+             <p> = "paragraph"
+             Digunakan untuk menampilkan teks dalam bentuk paragraf.
+        -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae quos ipsam facilis repellat
+            asperiores unde officiis voluptates nulla quisquam temporibus?
+        </p>
+
+
+        <!-- ---------------------------------------------------
+             2.2 HEADING
+             ---------------------------------------------------
+             Heading digunakan untuk judul dan sub-judul konten.
+             Ada 6 tingkatan: h1 (paling penting/besar) sampai h6 (paling kecil).
+             Aturan: gunakan h1 hanya SEKALI sebagai judul utama halaman,
+             lalu h2, h3, dst untuk sub-bagian di bawahnya (seperti daftar isi berjenjang).
+        -->
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five</h5>
+        <h6>Heading Six</h6>
+
+
+        <!-- ---------------------------------------------------
+             2.3 LIST (DAFTAR)
+             ---------------------------------------------------
+        -->
+
+        <!--
+            A. Unordered List (<ul>)
+            Daftar TANPA urutan/nomor. Biasanya ditandai dengan bullet (•).
+            Setiap item ditulis dengan <li> (list item).
+        -->
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul>
+
+        <!--
+            List juga bisa dibuat BERTINGKAT (nested list),
+            yaitu <ul> atau <ol> di dalam <li> lain.
+            Contoh: "List 2" punya sub-daftar sendiri.
+        -->
+        <ul>
+            <li>
+                <h2>List 1</h2>
+            </li>
+            <li>
+                List 2
+                <ul>
+                    <li>List 2.1</li>
+                    <li>List 2.2</li>
+                    <li>List 2.3</li>
+                </ul>
+            </li>
+            <li>List 3</li>
+        </ul>
+
+        <!--
+            B. Ordered List (<ol>)
+            Daftar DENGAN urutan/nomor otomatis.
+            Atribut "start" mengatur nomor awal (di sini mulai dari 5).
+        -->
+        <ol start="5">
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ol>
+
+
+        <!-- ---------------------------------------------------
+             2.4 IMAGE
+             ---------------------------------------------------
+             <img> digunakan untuk menampilkan gambar.
+             Wajib punya atribut "src" (sumber gambar) dan "alt" (teks alternatif
+             jika gambar gagal dimuat / untuk aksesibilitas).
+        -->
+
+        <!-- A. Gambar dari internet (online), sumbernya berupa URL -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfzrBxzC08Te1qybU23nROaGlfvoPM04oEpRSsUt29ox5U9E93pW9LlB_82hOYIy0zj26kVNjaJM5YYEI6A0CI3SWPggXU29jWm2h8iw&s=10"
+            alt="Ikan" width="200">
+
+        <!-- B. Gambar dari file lokal (offline), sumbernya berupa path file -->
+        <img src="/assets/images/ikan.webp" alt="">
+
+
+        <!-- ---------------------------------------------------
+             2.5 ANCHOR / HYPERLINK
+             ---------------------------------------------------
+             <a> = "anchor", digunakan untuk membuat tautan (link).
+             Atribut "href" menentukan tujuan tautan tersebut.
+        -->
+
+        <!-- A. Tautan ke website lain (eksternal) -->
+        <a href="https://google.com">Visit Google</a>
+
+        <!-- B. Tautan ke halaman lain di dalam website yang sama (lokal) -->
+        <a href="index.html">Visit to index.html</a>
+
+        <!-- C. Tautan yang membuka aplikasi email (diawali "mailto:") -->
+        <a href="mailto:richard.marcell8888@gmail.com">My Email</a>
+
+        <!-- D. Tautan yang membuka aplikasi telepon (diawali "tel:") -->
+        <a href="tel:+6281554098919">My Phone</a>
+
+
+        <!-- ---------------------------------------------------
+             2.6 SECTION & ARTICLE
+             ---------------------------------------------------
+             <section> = mengelompokkan konten yang punya TEMA yang sama.
+             <article> = konten yang berdiri sendiri / independen,
+                         tetap masuk akal walau dipisahkan dari halaman.
+        -->
+
+        <!--
+            Pola 1: <section> berisi beberapa <article>.
+            Cocok saat setiap bagian bisa berdiri sendiri (independen).
+        -->
+        <section>
+            <h1>My Portofolio</h1>
+            <article>
+                <h2>About Me</h2>
+                <p>My name is John Doe and I am a web developer.</p>
+            </article>
+            <article>
+                <h2>My Skills</h2>
+                <p>I am skilled in HTML, CSS, and JavaScript.</p>
+            </article>
+        </section>
+
+        <!--
+            Pola 2: <article> berisi beberapa <section>.
+            Cocok saat bagian-bagian tersebut SALING BERHUBUNGAN
+            dan menjadi satu kesatuan (misalnya artikel tutorial dengan beberapa tahap).
+        -->
+        <article>
+            <h1>Cara Membuat Website dengan HTML</h1>
+            <section>
+                <h2>Tahap 1: Persiapan</h2>
+                <p>Langkah pertama dalam membuat website adalah dengan menyiapkan tools dan environment yang
+                    diperlukan.</p>
+            </section>
+
+            <section>
+                <h2>Tahap 2: Membuat Struktur HTML</h2>
+                <p>Setelah menyiapkan tools dan environment, langkah selanjutnya adalah membuat struktur HTML dari
+                    website yang akan dibuat.</p>
+            </section>
+        </article>
+
+
+        <!-- ---------------------------------------------------
+             2.7 GENERIC ELEMENT (DIV & SPAN)
+             ---------------------------------------------------
+             Elemen ini TIDAK punya arti semantik (tidak menjelaskan
+             "isinya apa"), hanya digunakan sebagai wadah/pembungkus
+             untuk keperluan styling (CSS) atau scripting (JavaScript).
+        -->
+
+        <!-- A. <div> = wadah untuk konten dalam bentuk BLOK -->
+        <div>
+            <p>This is a div element.</p>
+        </div>
+
+        <!-- B. <span> = wadah untuk konten dalam bentuk teks/INLINE (sebagian dari kalimat) -->
+        <div>
+            <p>This is a <span>span element</span>.</p>
+        </div>
+
+
+        <!-- ---------------------------------------------------
+             2.8 TABLE
+             ---------------------------------------------------
+             Digunakan untuk menampilkan data dalam bentuk baris & kolom,
+             seperti tabel biodata, jadwal, atau nilai.
+
+             Elemen dasar tabel:
+             - <table> = wadah/pembungkus seluruh isi tabel
+             - <tr>    = "table row", membuat satu baris baru
+             - <th>    = "table header", sel untuk judul kolom/baris (teksnya otomatis tebal & rata tengah)
+             - <td>    = "table data", sel untuk data biasa
+        -->
+
+        <!--
+            A. TABLE DASAR + ATRIBUT "border"
+            Atribut "border" mengatur ketebalan garis pembatas tabel (dalam pixel).
+            border="1" artinya garis tabel setebal 1px akan muncul di semua sel.
+            Jika atribut ini dihilangkan, tabel akan tampil TANPA garis sama sekali.
+            (Catatan: di pembelajaran CSS nanti, border sebaiknya diatur lewat CSS,
+            bukan lewat atribut HTML. Tapi untuk latihan dasar, cara ini boleh dipakai dulu.)
+        -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>30</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>25</td>
+                    <td>Los Angeles</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--
+            B. COLSPAN (menggabungkan KOLOM)
+            Atribut "colspan" pada <th> atau <td> membuat satu sel
+            merentang ke SAMPING, menggabungkan beberapa kolom menjadi satu.
+            Ini mirip fitur "Merge Cells" di Microsoft Excel, tapi untuk kolom.
+
+            Contoh di bawah: sel "Data Nilai Siswa" merentang 3 kolom,
+            sehingga menjadi judul besar untuk 3 kolom di bawahnya (Matematika, IPA, IPS).
+        -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th colspan="3">Data Nilai Siswa</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Matematika</th>
+                    <th>IPA</th>
+                    <th>IPS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Budi</td>
+                    <td>85</td>
+                    <td>90</td>
+                    <td>88</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--
+            C. ROWSPAN (menggabungkan BARIS)
+            Atribut "rowspan" pada <th> atau <td> membuat satu sel
+            merentang ke BAWAH, menggabungkan beberapa baris menjadi satu.
+            Mirip "colspan", tapi arahnya vertikal, bukan horizontal.
+
+            Contoh di bawah: sel "Kelas X" merentang 2 baris,
+            karena berlaku untuk 2 siswa (Budi dan Ani) sekaligus.
+        -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Kelas</th>
+                    <th>Nama Siswa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Kelas X</td>
+                    <td>Budi</td>
+                </tr>
+                <tr>
+                    <td>Ani</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- ---------------------------------------------------
+             2.9 FORM
+             ---------------------------------------------------
+             Digunakan untuk mengumpulkan data/input dari pengguna,
+             misalnya form pendaftaran atau form kontak.
+             - <label> = teks keterangan untuk sebuah input (memakai "for"
+               yang harus sama dengan "id" input-nya, supaya saling terhubung)
+             - <input> = kolom isian, jenisnya diatur lewat atribut "type"
+        -->
+        <form action="https://google.com" method="get">
+            <div>
+                <label for="name">Nama</label>
+                <input placeholder="Masukkan nama Anda" id="name" name="name" type="text">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input placeholder="Masukkan Email Anda" id="email" name="email" type="email">
+            </div>
+            <div>
+                <label for="phone_number">No. Telepon</label>
+                <input placeholder="Masukkan nomor telepon Anda" id="phone_number" name="phone_number" type="tel">
+            </div>
+            <div>
+             <button type="submit">Submit</button>
+            </div>
+        </form>
+
+    </main>
+
+
+    <!-- =========================================================
+         3. FOOTER
+         =========================================================
+         <footer> diletakkan di bagian PALING BAWAH website.
+         Biasanya berisi hak cipta, kontak, atau link tambahan.
+    -->
+    <footer>
+        <p>
+        
+            &copy; 2026 SMK Immanuel 2026
+        </p>
+    </footer>
+
+</body>
+
+</html>
